@@ -1,13 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Page not found - 404</title>
-</head>
-<body>
-    <h1>The page you were looking for does not exist!</h1>
-</body>
-</html>
+@extends('layouts.layout')
+@section('content')
+    <div class="d-flex justify-content-center align-center">
+        <p class="display-4 text-white">Error 404 | This is not the page you were looking for...</p>
+    </div>
+@endsection
