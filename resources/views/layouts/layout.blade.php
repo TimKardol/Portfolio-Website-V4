@@ -8,7 +8,7 @@
     <title>Home</title>
 
 {{--  JS and CSS  --}}
-    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
 {{--    <script source="public/js/app.js"></script>--}}
 
 </head>
