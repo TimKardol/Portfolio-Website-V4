@@ -1,6 +1,26 @@
 //
 @import "node_modules/bootstrap/scss/bootstrap";
 
-p {
-    color: red !important;
+.error-margin {
+    margin-top: 50px !important;
+    margin-left: 33% !important;
+}
+
+
+.error-message {
+    //Font settings
+    color: white !important;
+    font-size: 50px;
+    font-weight: 300 !important;
+}
+
+
+a {
+    color: white !important;
+}
+
+
+.hover-not-found:hover {
+    text-decoration: none !important;
+    color: black !important;
 }
