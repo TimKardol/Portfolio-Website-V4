@@ -1,8 +1,8 @@
 // Main layout: Navbar and body styling
-@use "login";
-@use "register";
 @use "notFound";
 @use "internalServer";
+@use "login";
+@use "register";
 @import "node_modules/bootstrap/scss/bootstrap";
 
 html, body {
@@ -23,88 +23,46 @@ body {
 }
 
 
-// Navbar Styling
-.center-nav {
+/* Welcome Box style and animation */
+#homepage-welcome {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 
-.topnav {
-    background-color: rgba(255, 255, 255, 0);
-    overflow: hidden;
+#homepage-welcome h1 {
+    color: #ffffff;
+    font-size: 65px;
+    border: #ffffff 5px solid;
+    padding: 75px 150px;
+
+    /* Add margin in future */
+    margin: 200px;
+}
+
+#homepage-welcome {
+    -webkit-animation: homepage-welcome 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: homepage-welcome 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
-/* Style the links inside the navigation bar */
-.topnav a {
-    font-weight: bold;
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 5px 16px;
-    text-decoration: none;
-    font-size: 20px;
-}
+@-webkit-keyframes homepage-welcome {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-800px);
+        transform: translateZ(-800px);
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
 
-
-/* Add an active class to highlight the current page */
-.active {
-    background-color: rgba(76, 175, 79, 0);
-    color: white;
-    border-style: ridge;
-    border-right: white;
-    border-left: white;
-    border-top: white;
-}
-
-
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
-    display: none;
-}
-
-
-/* Dropdown container - needed to position the dropdown content */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-
-/* Style the dropdown button to fit inside the topnav */
-.dropdown .dropbtn {
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 5px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
-
-
-/* Style the dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-
-/* Style the links inside the dropdown */
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 
