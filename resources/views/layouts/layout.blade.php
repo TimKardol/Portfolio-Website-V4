@@ -13,21 +13,21 @@
 
 </head>
 <body>
-{{--  NavBar  --}}
     <!-- Navigation Bar -->
-    <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/events">Events</a>
-        @auth
-            <a href="/dashboard">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
-        @endauth
-        @guest
-            <a href="/register">Register</a>
-            <a href="/login">Login</a>
-        @endguest
-
-    </nav>
+    <div class="container">
+        <nav class="navbar navbar-light navbar-primary">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/events">Events</a>
+            @auth
+                <a href="/dashboard">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
+            @endauth
+            @guest
+                <a href="/register">Register</a>
+                <a href="/login">Login</a>
+            @endguest
+        </nav>
+    </div>
     @yield('content')
 </body>
 </html>
