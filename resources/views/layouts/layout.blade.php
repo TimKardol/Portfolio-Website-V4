@@ -15,24 +15,19 @@
 <body>
 {{--  NavBar  --}}
     <!-- Navigation Bar -->
-    <div class="center-nav">
-        <div class="topnav" id="myTopnav">
-            <a href="/" class="{{ Request::path() === '/' ? 'active' : '' }}">Home</a>
-            <a href="/about" class="{{ Request::path() === 'about' ? 'active' : '' }}">About</a>
-            <a href="/articles" class="{{ Request::path() === 'articles' ? 'active' : '' }}">Articles</a>
-            <a href="/dashboard" class="{{ Request::path() === 'dashboard' ? 'active' : '' }}">Dashboard</a>
-            <div class="dropdown">
-                <button class="dropbtn">Events
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">HBO-ICT Job Event</a>
-                    <a href="#">Bedrijvensafari</a>
-                </div>
-            </div>
-            <a href="javascript:void(0);" class="icon" onclick="toggleResponsive()">&#9776;</a>
-        </div>
-    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/events">Events</a>
+        @auth
+            <a href="/dashboard">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
+        @endauth
+        @guest
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+        @endguest
+
+    </nav>
     @yield('content')
 </body>
 </html>
