@@ -1,4 +1,6 @@
-// layout.scss
+// Main layout: Navbar and body styling
+@use "login";
+@use "register";
 @use "notFound";
 @use "internalServer";
 @import "node_modules/bootstrap/scss/bootstrap";
