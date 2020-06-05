@@ -54593,6 +54593,12 @@ body {
   overflow-x: hidden;
 }
 
+.navbar a {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* Welcome Box style and animation */
 
 #homepage-welcome {
