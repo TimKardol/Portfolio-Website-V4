@@ -1,2 +1,50 @@
 // Register page styling
 @import "node_modules/bootstrap/scss/bootstrap";
+
+$primary: rgb(0, 135, 236);
+$darker-primary: rgb(0, 90, 160) ;
+
+
+//Register Page Styling
+.register-card {
+    margin-top: 50px;
+    backdrop-filter: blur(50px);
+    border: none;
+    border-radius: 0.25rem;
+}
+
+
+.register-card-header {
+    background-color: $primary;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 10px 0px 10px 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.register-card-body {
+    padding: 15px;
+
+    font-weight: bold;
+}
+
+
+.register-button {
+    background-color: $primary;
+    border-radius: 0.25rem;
+    border: 1px solid $primary;
+    display: inline-block;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+
+.register-button:hover {
+    background-color: $darker-primary;
+    border: 1px solid $darker-primary;
+}
