@@ -20,7 +20,7 @@
             <a href="/about">About</a>
             <a href="/events">Events</a>
             @auth
-                <a href="/dashboard">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
+                <a href="/account">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
             @endauth
             @guest
                 <a href="/register">Register</a>
