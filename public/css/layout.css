@@ -54631,6 +54631,44 @@ a {
   color: black !important;
 }
 
+.register-card {
+  margin-top: 50px;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.message-card-header {
+  background-color: #0087ec;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  padding: 10px 0px 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.message-card-body {
+  padding: 15px;
+  font-weight: bold;
+}
+
+.create-message-button {
+  background-color: #0087ec;
+  border-radius: 0.25rem;
+  border: 1px solid #0087ec;
+  display: inline-block;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.create-message-button:hover {
+  background-color: #005aa0;
+  border: 1px solid #005aa0;
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
