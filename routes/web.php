@@ -18,8 +18,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::resource('articles', 'ArticleController');
-
 Auth::routes();
 
 Route::get('/account', 'HomeController@index')->name('account.account');
