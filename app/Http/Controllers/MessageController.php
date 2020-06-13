@@ -14,7 +14,14 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $user_id = \Auth::id();
+
+        $messages = Message::where('user_id', '=', $user_id)->get();
+
+        if (\Auth::check()){
+            return view('messages.index', ['user_id' => $user_id, 'messages' => $messages]);
+        }
+        else return redirect()->route('login');
     }
 
     /**
@@ -24,7 +31,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
+        return view('messages.create');
     }
 
     /**
@@ -35,7 +42,14 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        $request['user_id'] = \Auth::id();
+        Message::create($request->all());
+        return redirect()->route('messages.index');
     }
 
     /**
@@ -57,7 +71,7 @@ class MessageController extends Controller
      */
     public function edit(Message $message)
     {
-        //
+        return view('messages.edit', compact('message'));
     }
 
     /**
@@ -69,7 +83,13 @@ class MessageController extends Controller
      */
     public function update(Request $request, Message $message)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
+        $message->update($request->all());
+        return redirect()->route('messages.index');
     }
 
     /**
@@ -80,6 +100,7 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        $message->delete();
+        return redirect()->route('messages.index');
     }
 }
