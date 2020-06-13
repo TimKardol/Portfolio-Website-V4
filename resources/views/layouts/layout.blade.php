@@ -19,7 +19,7 @@
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/events">Events</a>
-            <a href="/messages">messages</a>
+            <a href="/messages">Messages</a>
             @auth
                 <a href="/account">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
             @endauth
