@@ -1,6 +1,10 @@
 // Messages page styling
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$primary: rgb(0, 135, 236);
+$darker-primary: rgb(0, 90, 160) ;
+
+
 .top-message {
     //Font settings
     color: white !important;
@@ -19,4 +23,49 @@ a {
 .hover-message:hover {
     text-decoration: none !important;
     color: black !important;
+}
+
+
+//Create Message Styling
+.register-card {
+    margin-top: 50px;
+    backdrop-filter: blur(50px);
+    border: none;
+    border-radius: 0.25rem;
+}
+
+
+.message-card-header {
+    background-color: $primary;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 10px 0px 10px 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.message-card-body {
+    padding: 15px;
+
+    font-weight: bold;
+}
+
+
+.create-message-button {
+    background-color: $primary;
+    border-radius: 0.25rem;
+    border: 1px solid $primary;
+    display: inline-block;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+
+.create-message-button:hover {
+    background-color: $darker-primary;
+    border: 1px solid $darker-primary;
 }
