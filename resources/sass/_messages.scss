@@ -1,0 +1,22 @@
+// Messages page styling
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.top-message {
+    //Font settings
+    color: white !important;
+    font-size: 50px;
+    font-weight: 300 !important;
+
+    margin-top: 25px;
+}
+
+
+a {
+    color: white !important;
+}
+
+
+.hover-message:hover {
+    text-decoration: none !important;
+    color: black !important;
+}
