@@ -69,3 +69,14 @@ a {
     background-color: $darker-primary;
     border: 1px solid $darker-primary;
 }
+
+
+// Show message on index
+.message-box {
+    padding: 10px 200px 10px 10px;
+    margin-bottom: 30px;
+    border-radius: 0.25rem;
+
+    backdrop-filter: blur(70px);
+    background-color: rgba(255, 255, 255, 0.22);
+}
