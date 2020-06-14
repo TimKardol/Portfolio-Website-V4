@@ -1,0 +1,108 @@
+// Messages page styling
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$primary: rgb(0, 135, 236);
+$darker-primary: rgb(0, 90, 160) ;
+
+
+.top-message {
+    //Font settings
+    color: white !important;
+    font-size: 50px;
+    font-weight: 300 !important;
+
+    margin-top: 25px;
+}
+
+
+a {
+    color: white !important;
+}
+
+
+.hover-message:hover {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+
+.hover-message-white:hover {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+
+.btn-outline-primary {
+    border: 2px solid !important;
+}
+
+
+.btn-outline-primary:hover {
+    color: #007bff !important;
+}
+
+
+.btn-outline-danger {
+    border: 2px solid !important;
+}
+
+
+.btn-outline-danger:hover {
+    color: #dc3545 !important;
+}
+
+
+//Create Message Styling
+.register-card {
+    margin-top: 50px;
+    backdrop-filter: blur(50px);
+    border: none;
+    border-radius: 0.25rem;
+}
+
+
+.message-card-header {
+    background-color: $primary;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 10px 0px 10px 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.message-card-body {
+    padding: 15px;
+
+    font-weight: bold;
+}
+
+
+.create-message-button {
+    background-color: $primary;
+    border-radius: 0.25rem;
+    border: 1px solid $primary;
+    display: inline-block;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+
+.create-message-button:hover {
+    background-color: $darker-primary;
+    border: 1px solid $darker-primary;
+}
+
+
+// Show message on index
+.message-box {
+    padding: 10px 200px 10px 10px;
+    margin-bottom: 30px;
+    border-radius: 0.25rem;
+
+    backdrop-filter: blur(70px);
+    background-color: rgba(255, 255, 255, 0.22);
+}
