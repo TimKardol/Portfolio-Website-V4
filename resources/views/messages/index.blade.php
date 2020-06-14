@@ -6,7 +6,7 @@
             <p class="top-message">Leave a nice message here!</p>
         </div>
         <div class="d-flex justify-content-center">
-            <button class="btn btn-outline-light"><a class="hover-message" type="submit" href="/messages/create">Create a new message</a></button>
+            <button class="btn btn-outline-light"><a class="hover-message" type="submit" href="{{ route('messages.create', $user_id) }}">Create a new message</a></button>
         </div>
         <br>
         @foreach($messages as $message)

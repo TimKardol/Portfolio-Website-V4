@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::resource('messages', 'MessageController');
-//Route::get('messages/{$message->id}/delete', ['uses' => 'MessageController@destroy', 'as' => 'messages.delete']);
+
 
 Auth::routes();
 
