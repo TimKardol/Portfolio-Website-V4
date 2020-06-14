@@ -8,5 +8,23 @@
         <div class="d-flex justify-content-center">
             <button class="btn btn-outline-light"><a class="hover-message" type="submit" href="/messages/create">Create a new message</a></button>
         </div>
+        <br>
+        @foreach($messages as $message)
+            <div class="d-flex justify-content-center">
+                <div class="message-box">
+                    <div>
+                        <h4>{{ $message->title }}</h4>
+                    </div>
+                    <div>
+                        <p>{{ $message->body }}</p>
+                    </div>
+                    @auth()
+                        <div>
+                            <button class="btn btn-primary"><a href="/"></a></button>
+                        </div>
+                    @endauth
+                </div>
+            </div>
+        @endforeach
     </div>
 @endsection
