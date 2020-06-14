@@ -54633,6 +54633,7 @@ a {
 
 .hover-message-white:hover {
   text-decoration: none !important;
+  color: white !important;
 }
 
 .btn-outline-primary {

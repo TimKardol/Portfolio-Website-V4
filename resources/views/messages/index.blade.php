@@ -18,12 +18,10 @@
                     <div>
                         <p>{{ $message->body }}</p>
                     </div>
-                    @auth()
-                        <div>
-                            <button class="btn btn-outline-primary" style="margin-right: 5px"><a class="hover-message-white" href="/messages/{{ $message->id }}/edit">Edit Message</a></button>
-                            <button class="btn btn-outline-danger"><a class="hover-message-white" href="/messages/{{ $message->id }}/edit">Delete Message</a></button>
-                        </div>
-                    @endauth
+
+                    <div>
+                        <button class="btn btn-outline-primary" style="margin-right: 5px"><a class="hover-message-white" href="/messages/{{ $message->id }}/edit">Edit Message</a></button>
+                    </div>
                 </div>
             </div>
         @endforeach
