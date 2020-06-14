@@ -54669,6 +54669,15 @@ a {
   border: 1px solid #005aa0;
 }
 
+.message-box {
+  padding: 10px 200px 10px 10px;
+  margin-bottom: 30px;
+  border-radius: 0.25rem;
+  -webkit-backdrop-filter: blur(70px);
+          backdrop-filter: blur(70px);
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
