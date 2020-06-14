@@ -26,6 +26,32 @@ a {
 }
 
 
+.hover-message-white:hover {
+    text-decoration: none !important;
+    //color: white !important;
+}
+
+
+.btn-outline-primary {
+    border: 2px solid !important;
+}
+
+
+.btn-outline-primary:hover {
+    color: #007bff !important;
+}
+
+
+.btn-outline-danger {
+    border: 2px solid !important;
+}
+
+
+.btn-outline-danger:hover {
+    color: #dc3545 !important;
+}
+
+
 //Create Message Styling
 .register-card {
     margin-top: 50px;
