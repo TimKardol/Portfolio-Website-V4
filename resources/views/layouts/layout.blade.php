@@ -17,8 +17,6 @@
     <div class="container">
         <nav class="navbar navbar-light navbar-primary">
             <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/events">Events</a>
             <a href="/messages">Messages</a>
             @auth
                 <a href="/account">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</a>
