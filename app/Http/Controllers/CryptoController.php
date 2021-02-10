@@ -14,7 +14,7 @@ class CryptoController extends Controller
      */
     public function index()
     {
-        //
+        return view('account.crypto.index');
     }
 
     /**
