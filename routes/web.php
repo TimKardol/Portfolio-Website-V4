@@ -19,10 +19,11 @@ Route::get('/', function () {
 });
 
 Route::resource('messages', 'MessageController');
-//Route::resource('crypto', 'CryptoController');
+Route::resource('crypto', 'CryptoController');
 
 
 Auth::routes();
 
 Route::get('/account', 'HomeController@index')->name('account.account');
 Route::get('/account/crypto', 'CryptoController@index')->name('account.crypto.index');
+Route::get('/account/crypto/create', 'CryptoController@create')->name('account.crypto.create');

@@ -14,7 +14,12 @@ class CryptoController extends Controller
      */
     public function index()
     {
-        return view('account.crypto.index');
+        $user_id = \Auth::id();
+
+        if (\Auth::check()){
+            return view('account.crypto.index', ['user_id' => $user_id]);
+        }
+        else return redirect()->route('login');
     }
 
     /**
@@ -24,7 +29,7 @@ class CryptoController extends Controller
      */
     public function create()
     {
-        //
+        return view('account.crypto.create');
     }
 
     /**
@@ -35,7 +40,16 @@ class CryptoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'coin_name' => 'required',
+            'initial_value' => 'required',
+            'current_value' => 'required',
+            'potential_profit' => 'required'
+        ]);
+
+        $request['user_id'] = \Auth::id();
+        Crypto::create($request->all());
+        return redirect('account.crypto.index');
     }
 
     /**
@@ -57,7 +71,7 @@ class CryptoController extends Controller
      */
     public function edit(Crypto $crypto)
     {
-        //
+        return view('account.crypto.edit', compact('crypto'));
     }
 
     /**
@@ -69,7 +83,15 @@ class CryptoController extends Controller
      */
     public function update(Request $request, Crypto $crypto)
     {
-        //
+        $request->validate([
+            'coin_name' => 'required',
+            'initial_value' => 'required',
+            'current_value' => 'required',
+            'potential_profit' => 'required'
+        ]);
+
+        $crypto->update($request->all());
+        return redirect('account.crypto.index');
     }
 
     /**
@@ -80,6 +102,7 @@ class CryptoController extends Controller
      */
     public function destroy(Crypto $crypto)
     {
-        //
+        $crypto->delete();
+        return redirect('account.crypto.index');
     }
 }
