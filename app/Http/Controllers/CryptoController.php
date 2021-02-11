@@ -54,8 +54,6 @@ class CryptoController extends Controller
             'potential_profit' => 0
         ]));
 
-//        $request['user_id'] = \Auth::id();
-//        Crypto::create($request->all());
         return redirect('account.cryptos.index');
     }
 
