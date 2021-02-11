@@ -14,10 +14,8 @@ class CryptoController extends Controller
      */
     public function index()
     {
-        $user_id = \Auth::id();
-
         if (\Auth::check()){
-            return view('account.crypto.index', ['user_id' => $user_id]);
+            return view('account.cryptos.index', ['user_id' => $user_id]);
         }
         else return redirect()->route('login');
     }
@@ -29,7 +27,7 @@ class CryptoController extends Controller
      */
     public function create()
     {
-        return view('account.crypto.create');
+        return view('account.cryptos.create');
     }
 
     /**
@@ -42,14 +40,23 @@ class CryptoController extends Controller
     {
         $request->validate([
             'coin_name' => 'required',
+            'coin_amount' => 'required',
             'initial_value' => 'required',
             'current_value' => 'required',
-            'potential_profit' => 'required'
         ]);
 
-        $request['user_id'] = \Auth::id();
-        Crypto::create($request->all());
-        return redirect('account.crypto.index');
+        Crypto::create(([
+            'user_id' => auth()->user()->id,
+            'coin_name' => $request->coin_name,
+            'coin_amount' => $request->coin_amount,
+            'initial_value' => $request->initial_value,
+            'current_value' => $request->current_value,
+            'potential_profit' => 0
+        ]));
+
+//        $request['user_id'] = \Auth::id();
+//        Crypto::create($request->all());
+        return redirect('account.cryptos.index');
     }
 
     /**
@@ -71,7 +78,7 @@ class CryptoController extends Controller
      */
     public function edit(Crypto $crypto)
     {
-        return view('account.crypto.edit', compact('crypto'));
+        return view('account.cryptos.edit', compact('crypto'));
     }
 
     /**
@@ -85,13 +92,14 @@ class CryptoController extends Controller
     {
         $request->validate([
             'coin_name' => 'required',
+            'coin_amount' => 'required',
             'initial_value' => 'required',
             'current_value' => 'required',
             'potential_profit' => 'required'
         ]);
 
         $crypto->update($request->all());
-        return redirect('account.crypto.index');
+        return redirect('account.cryptos.index');
     }
 
     /**
@@ -103,6 +111,6 @@ class CryptoController extends Controller
     public function destroy(Crypto $crypto)
     {
         $crypto->delete();
-        return redirect('account.crypto.index');
+        return redirect('account.cryptos.index');
     }
 }

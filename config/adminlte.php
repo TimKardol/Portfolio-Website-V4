@@ -248,7 +248,7 @@ return [
         ['header' => 'Stocks'],
         [
             'text' => 'Crypto',
-            'url' => 'account/crypto',
+            'url' => 'account/cryptos',
             'icon' => 'fab fa-btc'
         ]
     ],

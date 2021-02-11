@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <button class="btn btn-primary"><a class="hover-message" type="submit" href="{{ route('account.crypto.create', $user_id) }}">Add new currency</a></button>
+    <button class="btn btn-primary"><a class="text-white" type="submit" href="{{ route('account.cryptos.create', $user_id) }}">Add new currency</a></button>
 @stop
 
 @section('css')
