@@ -14,6 +14,8 @@ class CryptoController extends Controller
      */
     public function index()
     {
+        $user_id = \Auth::id();
+
         if (\Auth::check()){
             return view('account.cryptos.index', ['user_id' => $user_id]);
         }
