@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <button class="btn btn-primary"><a class="text-white" type="submit" href="{{ route('cryptos.create', $user_id) }}">Add new currency</a></button>
+    <button class="btn btn-primary"><a class="text-white" type="submit" href="{{ route('cryptos.create') }}">Add new currency</a></button>
     <br>
     <br>
 {{--  TODO: Add table to show DB results  --}}
@@ -19,11 +19,15 @@
             <th>Current Value</th>
             <th>Potential Profit</th>
         </tr>
-{{--        @foreach($cryptos as $crypto)--}}
-{{--            <tr>--}}
-{{--                <td>{{ $crypto->coin_name }}</td>--}}
-{{--            </tr>--}}
-{{--        @endforeach--}}
+        @foreach($cryptos as $crypto)
+            <tr>
+                <td>{{ $crypto->coin_name }}</td>
+                <td>{{ $crypto->coin_amount }}</td>
+                <td>{{ $crypto->initial_value }}</td>
+                <td>{{ $crypto->current_value }}</td>
+                <td>{{ $crypto->potential_value }}</td>
+            </tr>
+        @endforeach
     </table>
 @stop
 

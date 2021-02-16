@@ -30,11 +30,11 @@
                             <label for="current_value">Huidige waarde</label>
                             <input class="form-control" id="current_value" type="number" name="current_value" step="0.01" placeholder="Huidige waarde"><br>
 
-                            <label for="potential_profit">Pontentiële winst</label>
-                            <input class="form-control" id="potential_profit" type="number" name="potential_profit" step="0.01" placeholder="Pontentiële winst"><br>
+{{--                            <label for="potential_profit">Pontentiële winst</label>--}}
+{{--                            <input class="form-control" id="potential_profit" type="number" name="potential_profit" step="0.01" placeholder="Pontentiële winst"><br>--}}
 
                         <button class="btn btn-success" type="submit"><a href="{{ route('cryptos.store') }}"></a>Toevoegen</button>
-                        <button class="btn btn-primary" id="calculate" type="button" onclick="logOutput()">Bereken</button>
+{{--                        <button class="btn btn-primary" id="calculate" type="button" onclick="logOutput()">Bereken</button>--}}
                             <a class="btn" href="{{ route('cryptos.index') }}">Annuleren</a>
                         </form>
                     </div>

@@ -15,8 +15,9 @@ class CryptoController extends Controller
     public function index()
     {
         $user_id = \Auth::id();
+        $cryptos = Crypto::all();
 
-        return view('cryptos.index', ['user_id' => $user_id]);
+        return view('cryptos.index', ['user_id' => $user_id], compact('cryptos'));
     }
 
     /**
@@ -53,7 +54,9 @@ class CryptoController extends Controller
             'potential_profit' => 0
         ]));
 
-        return redirect('cryptos.index');
+        $cryptos = Crypto::all();
+
+        return view('cryptos.index', compact('cryptos'));
     }
 
     /**
@@ -64,7 +67,7 @@ class CryptoController extends Controller
      */
     public function show(Crypto $crypto)
     {
-        //
+
     }
 
     /**
