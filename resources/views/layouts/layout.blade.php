@@ -9,7 +9,7 @@
 
 {{--  JS and CSS  --}}
     <link rel="stylesheet" type="text/css" href="/css/layout.css">
-{{--    <script source="public/js/app.js"></script>--}}
+    <script source="public/js/app.js"></script>
 
 </head>
 <body>

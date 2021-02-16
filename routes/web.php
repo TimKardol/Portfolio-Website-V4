@@ -19,12 +19,11 @@ Route::get('/', function () {
 });
 
 Route::resource('messages', 'MessageController');
-//Route::resource('cryptos', 'CryptoController');
+
 
 Auth::routes();
 
 Route::get('/account', 'HomeController@index')->name('account.account');
-Route::get('/account/cryptos', 'CryptoController@index')->name('account.cryptos.index');
-Route::get('/account/cryptos/create', 'CryptoController@create')->name('account.cryptos.create');
-Route::post('/account/cryptos/store', 'CryptoController@store')->name('account.cryptos.store');
+Route::resource('/account/cryptos', 'CryptoController')->middleware('auth');
+
 
