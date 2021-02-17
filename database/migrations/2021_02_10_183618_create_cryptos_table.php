@@ -17,7 +17,7 @@ class CreateCryptosTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->string('coin_name');
-            $table->float('coin_amount');
+            $table->float('coin_amount', '8', '8');
             $table->float('initial_value');
             $table->float('current_value');
             $table->float('potential_profit')->nullable();
