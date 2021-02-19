@@ -7,7 +7,9 @@
 @stop
 
 @section('content')
+    <script type="text/javascript" defer src="../js/app.js"></script>
     <button class="btn btn-primary"><a class="text-white" type="submit" href="{{ route('cryptos.create') }}">Add new currency</a></button>
+    <button class="btn btn-success" id="calculate">Calculate</button>
     <br>
     <br>
 {{--  TODO: Add table to show DB results  --}}
@@ -15,9 +17,9 @@
         <tr>
             <th>Coin Name</th>
             <th>Coin Amount</th>
-            <th>Initial Value</th>
-            <th>Current Value</th>
-            <th>Potential Profit</th>
+            <th>Initial Value (€)</th>
+            <th>Current Value (€)</th>
+            <th>Potential Profit (€)</th>
         </tr>
         @foreach($cryptos as $crypto)
             <tr>
@@ -29,7 +31,6 @@
             </tr>
         @endforeach
     </table>
-    <script src="../js/app.js"></script>
 @stop
 
 @section('css')

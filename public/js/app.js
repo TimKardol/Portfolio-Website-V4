@@ -19379,11 +19379,14 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-function calculateProfit() {
+window.addEventListener('load', function () {
+  console.log('DOM is loaded');
+});
+document.getElementById('calculate').addEventListener('click', function calculateProfit() {
   var initialValue = document.getElementById('initialValue').innerText;
   var currentValue = document.getElementById('currentValue').innerText;
-  var profit = currentValue - initialValue;
-}
+  document.getElementById('profit').innerText = currentValue - initialValue;
+});
 
 /***/ }),
 
@@ -19437,8 +19440,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! G:\GitHub\Portfolio-Website-V4\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! G:\GitHub\Portfolio-Website-V4\resources\sass\layout.scss */"./resources/sass/layout.scss");
+__webpack_require__(/*! D:\Projects\Portfolio-Website-V4\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Projects\Portfolio-Website-V4\resources\sass\layout.scss */"./resources/sass/layout.scss");
 
 
 /***/ })
