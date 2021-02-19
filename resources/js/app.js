@@ -1,6 +1,9 @@
 require('./bootstrap');
 
-let initialValue = document.getElementById('initialValue').valueOf();
-let currentValue = document.getElementById('currentValue').valueOf();
+function calculateProfit() {
+    let initialValue = document.getElementById('initialValue').innerText;
+    let currentValue = document.getElementById('currentValue').innerText;
 
-console.log(initialValue, currentValue);
+    let profit = currentValue - initialValue;
+
+}

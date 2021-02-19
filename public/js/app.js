@@ -19379,9 +19379,11 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-var initialValue = document.getElementById('initialValue').valueOf();
-var currentValue = document.getElementById('currentValue').valueOf();
-console.log(initialValue, currentValue);
+function calculateProfit() {
+  var initialValue = document.getElementById('initialValue').innerText;
+  var currentValue = document.getElementById('currentValue').innerText;
+  var profit = currentValue - initialValue;
+}
 
 /***/ }),
 
