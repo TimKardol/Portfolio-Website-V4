@@ -23,12 +23,13 @@
             <tr>
                 <td>{{ $crypto->coin_name }}</td>
                 <td>{{ $crypto->coin_amount }}</td>
-                <td>{{ $crypto->initial_value }}</td>
-                <td>{{ $crypto->current_value }}</td>
+                <td id="initialValue">{{ $crypto->initial_value }}</td>
+                <td id="currentValue">{{ $crypto->current_value }}</td>
                 <td id="profit"></td>
             </tr>
         @endforeach
     </table>
+    <script src="../js/app.js"></script>
 @stop
 
 @section('css')

@@ -1,10 +1,6 @@
 require('./bootstrap');
 
-initialValue = document.getElementById('initial_value');
-currentValue = document.getElementById('current_value');
+let initialValue = document.getElementById('initialValue').valueOf();
+let currentValue = document.getElementById('currentValue').valueOf();
 
-function logOutput(initialValue, currentValue) {
-    console.log(currentValue, initialValue)
-};
-
-document.getElementById("calculate").addEventListener("click", logOutput);
+console.log(initialValue, currentValue);
