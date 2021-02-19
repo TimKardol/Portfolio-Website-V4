@@ -25,7 +25,7 @@
                 <td>{{ $crypto->coin_amount }}</td>
                 <td>{{ $crypto->initial_value }}</td>
                 <td>{{ $crypto->current_value }}</td>
-                <td>{{ $crypto->potential_value }}</td>
+                <td id="profit"></td>
             </tr>
         @endforeach
     </table>

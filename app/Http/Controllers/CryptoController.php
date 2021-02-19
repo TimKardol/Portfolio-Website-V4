@@ -51,7 +51,6 @@ class CryptoController extends Controller
             'coin_amount' => $request->coin_amount,
             'initial_value' => $request->initial_value,
             'current_value' => $request->current_value,
-            'potential_profit' => 0
         ]));
 
         $cryptos = Crypto::all();

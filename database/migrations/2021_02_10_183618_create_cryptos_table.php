@@ -20,7 +20,6 @@ class CreateCryptosTable extends Migration
             $table->float('coin_amount', '8', '8');
             $table->float('initial_value');
             $table->float('current_value');
-            $table->float('potential_profit')->nullable();
             $table->timestamps();
         });
     }
